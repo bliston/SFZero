@@ -14,7 +14,6 @@ Please note that, in order to build, SFZero requires [Juce](http://www.juce.com)
 Before building the plugin, it's necessary to
 
 * copy the modules/SFZero folder as a childfolder to your Juce modules folder.
-* load `SFZero.jucer` into your IntroJucer tool and save the project again. This should regenerate the project build definitions with the proper links to your Juce module location.
-
+* load `plugin/SFZero.jucer` into your IntroJucer tool and save the project again. This should regenerate the project build definitions with the proper links to your Juce module location.
 
 
