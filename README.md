@@ -5,9 +5,16 @@ This is a fork of the [original SFZero by Steve Folta](https://github.com/stevef
 * has been converted to a Juce module, so you can easily consume it from your own projects (you still get the sample player plugin, but it now includes that module)
 * compiles against Juce 4.1
 * conveniently sits within its own `sfzero::` namespace
-* has a tidied-up code base, so it now builds with as few warnings as possible on all platforms and on both 32/64 bit architectures. I also simplified logging, added a support for synchronous sample loading, and fixed a few bugs.
+* has a tidied-up code base, so it now builds with as few warnings as possible on all platforms and on both 32/64 bit architectures. I also simplified logging, added support for synchronous sample loading, and fixed a few bugs.
 
 For more information, please see also this [blog article](http://www.mucoder.net/blog/2016/03/24/sfzero.html)
+
+Please note that, in order to build, SFZero requires [Juce](http://www.juce.com).
+
+Before building the plugin, it's necessary to
+
+* copy the modules/SFZero folder as a childfolder to your Juce modules folder.
+* load `SFZero.jucer` into your IntroJucer tool and save the project again. This should regenerate the project build definitions with the proper links to your Juce module location.
 
 
 

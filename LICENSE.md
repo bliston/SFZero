@@ -1,5 +1,7 @@
 Copyright (C) 2012 Steve Folta 
+
 Converted to Juce module (C) 2016 Leo Olivers
+
 Forked from https://github.com/stevefolta/SFZero
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
