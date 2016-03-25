@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2015
+Project("{307208DA-579B-69AF-8AA1-ED417255BCF7}") = "SFZero", "SFZero.vcxproj", "{03C14F52-C8E0-C797-D3CF-5FCEDDC6A352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03C14F52-C8E0-C797-D3CF-5FCEDDC6A352}.Debug|Win32.ActiveCfg = Debug|Win32
+		{03C14F52-C8E0-C797-D3CF-5FCEDDC6A352}.Debug|Win32.Build.0 = Debug|Win32
+		{03C14F52-C8E0-C797-D3CF-5FCEDDC6A352}.Release|Win32.ActiveCfg = Release|Win32
+		{03C14F52-C8E0-C797-D3CF-5FCEDDC6A352}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

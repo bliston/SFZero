@@ -1,0 +1,33 @@
+{
+  "id":             "SFZero",
+  "name":           "SFZero soundfont player",
+  "version":        "2.0.0",
+  "description":    "SFZero .szf/.sf2 soundfont player; forked from https://github.com/stevefolta/SFZero and converted to Juce module by Leo Olivers",
+  "website":        "https://github.com/altalogix/SFZero",
+  "license":        "MIT",
+
+  "dependencies":   [ { "id": "juce_gui_basics",       "version": "4.1.0" },
+                      { "id": "juce_audio_basics",     "version": "4.1.0" },
+                      { "id": "juce_audio_processors", "version": "4.1.0" } ],
+					  
+  "include":        "SFZero.h",
+
+  "compile":        [ { "file": "SFZero.cpp" },
+					  { "file": "sfzero/RIFF.cpp" },
+					  { "file": "sfzero/SF2.cpp" },
+					  { "file": "sfzero/SF2Generator.cpp" },
+				 	  { "file": "sfzero/SF2Reader.cpp" },
+					  { "file": "sfzero/SF2Sound.cpp" },
+					  { "file": "sfzero/SFZDebug.cpp" },
+					  { "file": "sfzero/SFZEG.cpp" },
+					  { "file": "sfzero/SFZReader.cpp" },
+					  { "file": "sfzero/SFZRegion.cpp" },
+					  { "file": "sfzero/SFZSample.cpp" },
+					  { "file": "sfzero/SFZSound.cpp" },
+					  { "file": "sfzero/SFZSynth.cpp" },
+					  { "file": "sfzero/SFZVoice.cpp" }
+					 ],
+
+
+  "browse":         [ "sfzero/*" ]
+}
