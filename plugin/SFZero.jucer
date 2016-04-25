@@ -20,19 +20,19 @@
                        osxSDK="default" osxCompatibility="default" osxArchitecture="default"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="SFZero" path="../../SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../modules"/>
+        <MODULEPATH id="juce_graphics" path="../modules"/>
+        <MODULEPATH id="juce_events" path="../modules"/>
+        <MODULEPATH id="juce_data_structures" path="../modules"/>
+        <MODULEPATH id="juce_core" path="../modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../modules"/>
+        <MODULEPATH id="SFZero" path="../modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <LINUX_MAKE targetFolder="Builds/Linux" vstFolder="../../SDKs/vstsdk2.4">
@@ -43,19 +43,19 @@
                        targetName="SFZero"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="SFZero" path="../../SDKs/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../modules"/>
+        <MODULEPATH id="juce_graphics" path="../modules"/>
+        <MODULEPATH id="juce_events" path="../modules"/>
+        <MODULEPATH id="juce_data_structures" path="../modules"/>
+        <MODULEPATH id="juce_core" path="../modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../modules"/>
+        <MODULEPATH id="SFZero" path="../modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
     <VS2015 targetFolder="Builds/VisualStudio2015" vstFolder="">
@@ -66,19 +66,19 @@
                        isDebug="0" optimisation="3" targetName="SFZero"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="SFZero" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_graphics" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_events" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_core" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../SDKs/juce/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../SDKs/juce/modules"/>
+        <MODULEPATH id="SFZero" path="../modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../modules"/>
+        <MODULEPATH id="juce_graphics" path="../modules"/>
+        <MODULEPATH id="juce_events" path="../modules"/>
+        <MODULEPATH id="juce_data_structures" path="../modules"/>
+        <MODULEPATH id="juce_core" path="../modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../modules"/>
       </MODULEPATHS>
     </VS2015>
   </EXPORTFORMATS>
