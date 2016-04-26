@@ -3,8 +3,7 @@
 
 sfzero::SFZeroAudioProcessor::SFZeroAudioProcessor() : loadProgress(0.0), loadThread(this)
 {
-  formatManager.registerFormat(new WavAudioFormat(), false);
-  formatManager.registerFormat(new OggVorbisAudioFormat(), false);
+  formatManager.registerBasicFormats();
 
   for (int i = 0; i < 128; ++i)
   {

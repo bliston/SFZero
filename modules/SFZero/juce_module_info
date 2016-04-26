@@ -1,7 +1,7 @@
 {
   "id": "SFZero",
   "name": "SFZero soundfont player",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "SFZero .szf/.sf2 soundfont player; forked from https://github.com/stevefolta/SFZero and converted to Juce module by Leo Olivers",
   "website": "https://github.com/altalogix/SFZero",
   "license": "MIT",

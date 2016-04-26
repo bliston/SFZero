@@ -18,4 +18,5 @@ Before building the plugin, it's necessary to
 * copy the modules/SFZero folder as a childfolder to your Juce modules folder.
 * load `plugin/SFZero.jucer` into your IntroJucer tool and save the project again. This should regenerate the project build definitions with the proper links to your Juce module location.
 
+You can find this fork's source code at: [https://github.com/altalogix/SFZero](https://github.com/altalogix/SFZero)
 
