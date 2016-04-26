@@ -8,7 +8,7 @@ This is a fork of the [original SFZero by Steve Folta](https://github.com/stevef
 * now also supports new Juce 4.2 module format (thanks to Loki Davison)
 * conveniently sits within its own `sfzero::` namespace
 * has a tidied-up code base, so it now builds with as few warnings as possible on all platforms and on both 32/64 bit architectures. I also simplified logging, added support for synchronous sample loading, and fixed a few bugs.
-* the SFZero Juce module and sample plugin have been separated and the Juce module is now available as a git submodule for easy inclusion in other repositories
+* the SFZero Juce module and sample plugin have been separated and the Juce module is now available as a [git submodule](https://github.com/altalogix/SFZeroModule) for easy inclusion in other repositories
 
 For more information, please see also this [blog article](http://www.mucoder.net/blog/2016/03/24/sfzero.html)
 
