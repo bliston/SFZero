@@ -38,10 +38,10 @@
   </PropertyGroup>
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SFZero</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Sampled Instrument</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SFZero</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Sampled Instrument</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
     <PlatformToolset>v140</PlatformToolset>
@@ -57,8 +57,8 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\JuceLibraryCode;..\..\..\..\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2015_78A5022=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\JuceLibraryCode;..\..\..\..\JUCE\modules;..\..\..\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2015_78A5022=1;JUCE_APP_VERSION=0.0.1;JUCE_APP_VERSION_HEX=0x1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader/>
@@ -73,11 +73,11 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\SFZero.dll</OutputFile>
+      <OutputFile>$(OutDir)\Sampled Instrument.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt.lib; msvcrt.lib;;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)\SFZero.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)\Sampled Instrument.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
@@ -85,7 +85,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(IntDir)\SFZero.bsc</OutputFile>
+      <OutputFile>$(IntDir)\Sampled Instrument.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -98,8 +98,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>..\..\JuceLibraryCode;..\..\..\..\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2015_78A5022=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\JuceLibraryCode;..\..\..\..\JUCE\modules;..\..\..\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2015_78A5022=1;JUCE_APP_VERSION=0.0.1;JUCE_APP_VERSION_HEX=0x1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader/>
@@ -114,11 +114,11 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\SFZero.dll</OutputFile>
+      <OutputFile>$(OutDir)\Sampled Instrument.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)\SFZero.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)\Sampled Instrument.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
       <OptimizeReferences>true</OptimizeReferences>
@@ -127,7 +127,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(IntDir)\SFZero.bsc</OutputFile>
+      <OutputFile>$(IntDir)\Sampled Instrument.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -1756,46 +1756,46 @@
     <ClCompile Include="..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\RIFF.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\RIFF.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SF2.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2Generator.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SF2Generator.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2Reader.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SF2Reader.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2Sound.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SF2Sound.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZDebug.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZDebug.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZEG.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZEG.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZReader.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZReader.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZRegion.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZRegion.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZSample.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZSample.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZSound.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZSound.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZSynth.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZSynth.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZVoice.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\sfzero\SFZVoice.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\JUCE\modules\SFZero\SFZero.cpp">
+    <ClCompile Include="..\..\..\modules\SFZero\SFZero.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\juce_audio_basics.cpp"/>
@@ -2439,33 +2439,33 @@
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_gui_extra\native\juce_mac_CarbonViewWrapperComponent.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\generators.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\ibag.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\igen.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\imod.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\inst.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\iver.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\pbag.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\pgen.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\phdr.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\pmod.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\sf2-chunks\shdr.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\RIFF.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2Generator.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2Reader.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2Sound.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SF2WinTypes.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZCommon.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZDebug.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZEG.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZReader.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZRegion.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZSample.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZSound.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZSynth.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\sfzero\SFZVoice.h"/>
-    <ClInclude Include="..\..\..\..\JUCE\modules\SFZero\SFZero.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\generators.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\ibag.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\igen.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\imod.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\inst.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\iver.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\pbag.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\pgen.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\phdr.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\pmod.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\shdr.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\RIFF.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SF2.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SF2Generator.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SF2Reader.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SF2Sound.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SF2WinTypes.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZCommon.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZDebug.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZEG.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZReader.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZRegion.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZSample.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZSound.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZSynth.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\sfzero\SFZVoice.h"/>
+    <ClInclude Include="..\..\..\modules\SFZero\SFZero.h"/>
     <ClInclude Include="..\..\..\modules\SFZero\SFZero.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\AppConfig.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
@@ -2479,7 +2479,7 @@
     <None Include="..\..\..\..\JUCE\modules\juce_audio_plugin_client\juce_audio_plugin_client_RTAS.r"/>
     <None Include="..\..\..\..\JUCE\modules\juce_graphics\image_formats\jpglib\changes to libjpeg for JUCE.txt"/>
     <None Include="..\..\..\..\JUCE\modules\juce_graphics\image_formats\pnglib\libpng_readme.txt"/>
-    <None Include="..\..\..\..\JUCE\modules\SFZero\README.md"/>
+    <None Include="..\..\..\modules\SFZero\README.md"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\resources.rc"/>
