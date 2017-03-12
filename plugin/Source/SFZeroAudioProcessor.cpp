@@ -89,7 +89,8 @@ AudioProcessorEditor *sfzero::SFZeroAudioProcessor::createEditor() { return new 
 void sfzero::SFZeroAudioProcessor::getStateInformation(MemoryBlock &destData)
 {
   auto obj = new DynamicObject();
-  obj->setProperty("sfzFilePath", sfzFile.getFullPathName());
+  String fileName = filePathToSfzPropertyString(sfzFile.getFullPathName());
+  obj->setProperty("sfzFileName", fileName);
   auto sound = getSound();
   if (sound)
   {
@@ -106,14 +107,14 @@ void sfzero::SFZeroAudioProcessor::setStateInformation(const void *data, int siz
 {
   MemoryInputStream in(data, sizeInBytes, false);
   var state = JSON::parse(in);
-  var pathVar = state["sfzFilePath"];
-  if (pathVar.isString())
+  var fileNameVar = state["sfzFileName"];
+  if (fileNameVar.isString())
   {
-    auto sfzFilePath = pathVar.toString();
-    if (!sfzFilePath.isEmpty())
+    auto sfzFileName = fileNameVar.toString();
+    if (!sfzFileName.isEmpty())
     {
-      File file(sfzFilePath);
-      setSfzFile(&file);
+	  String finalPath = sfzPropertyStringToFilePath(sfzFileName);
+      setSfzFile(&File(finalPath));
       auto sound = getSound();
       if (sound)
       {
@@ -175,3 +176,18 @@ sfzero::SFZeroAudioProcessor::LoadThread::LoadThread(SFZeroAudioProcessor *proce
 void sfzero::SFZeroAudioProcessor::LoadThread::run() { processor->loadSound(this); }
 
 AudioProcessor *JUCE_CALLTYPE createPluginFilter() { return new sfzero::SFZeroAudioProcessor(); }
+
+String sfzero::SFZeroAudioProcessor::filePathToSfzPropertyString(String filePath) const
+{
+	File file(filePath);
+	return file.getFileName();
+}
+
+String sfzero::SFZeroAudioProcessor::sfzPropertyStringToFilePath(String fileName)
+{
+	String finalPath;
+	String documentsFolder = File::getSpecialLocation(File::userDocumentsDirectory).getFullPathName();
+	String folder = documentsFolder + "\\Middle\\Plugin Patches\\Sampled Instrument Patches\\";
+	finalPath = folder + fileName;
+	return finalPath;
+}

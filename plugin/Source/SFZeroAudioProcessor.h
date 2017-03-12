@@ -75,6 +75,9 @@ protected:
 
   void loadSound(Thread *thread = nullptr);
 
+  String filePathToSfzPropertyString(String filePath) const;
+  String sfzPropertyStringToFilePath(String fileName);
+
 private:
   JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(SFZeroAudioProcessor);
 };
