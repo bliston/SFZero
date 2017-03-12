@@ -187,7 +187,7 @@ String sfzero::SFZeroAudioProcessor::sfzPropertyStringToFilePath(String fileName
 {
 	String finalPath;
 	String documentsFolder = File::getSpecialLocation(File::userDocumentsDirectory).getFullPathName();
-	String folder = documentsFolder + "\\Middle\\Plugin Patches\\Sampled Instrument Patches\\";
+	String folder = documentsFolder + "/Middle/Plugin Patches/Sampled Instrument Patches/";
 	finalPath = folder + fileName;
 	return finalPath;
 }
