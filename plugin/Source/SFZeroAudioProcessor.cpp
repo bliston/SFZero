@@ -114,7 +114,7 @@ void sfzero::SFZeroAudioProcessor::setStateInformation(const void *data, int siz
     if (!sfzFileName.isEmpty())
     {
 	  String finalPath = sfzPropertyStringToFilePath(sfzFileName);
-      setSfzFile(&File(finalPath));
+      setSfzFile( new File(finalPath));
       auto sound = getSound();
       if (sound)
       {
