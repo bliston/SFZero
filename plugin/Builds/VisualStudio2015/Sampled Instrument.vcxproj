@@ -131,6 +131,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\BinaryData.cpp"/>
     <ClCompile Include="..\..\Source\ClickableLabel.cpp"/>
     <ClCompile Include="..\..\Source\SFZeroAudioProcessor.cpp"/>
     <ClCompile Include="..\..\Source\SFZeroEditor.cpp"/>
@@ -1814,9 +1815,13 @@
     <ClCompile Include="..\..\JuceLibraryCode\SFZero.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\AppColours.h"/>
+    <ClInclude Include="..\..\Source\BinaryData.h"/>
     <ClInclude Include="..\..\Source\ClickableLabel.h"/>
+    <ClInclude Include="..\..\Source\CustomLookAndFeel.h"/>
     <ClInclude Include="..\..\Source\SFZeroAudioProcessor.h"/>
     <ClInclude Include="..\..\Source\SFZeroEditor.h"/>
+    <ClInclude Include="..\..\Source\TemplateOptionButton.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioSampleBuffer.h"/>

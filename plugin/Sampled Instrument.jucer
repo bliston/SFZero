@@ -86,10 +86,15 @@
   </EXPORTFORMATS>
   <MAINGROUP id="STGh0u" name="Sampled Instrument">
     <GROUP id="{1110531B-E755-9964-D428-0B0E27C2D745}" name="Source">
+      <FILE id="Y0lLC9" name="AppColours.h" compile="0" resource="0" file="Source/AppColours.h"/>
+      <FILE id="YQNwoV" name="BinaryData.cpp" compile="1" resource="0" file="Source/BinaryData.cpp"/>
+      <FILE id="X30Aqy" name="BinaryData.h" compile="0" resource="0" file="Source/BinaryData.h"/>
       <FILE id="onAAbD" name="ClickableLabel.cpp" compile="1" resource="0"
             file="Source/ClickableLabel.cpp"/>
       <FILE id="lQwIPH" name="ClickableLabel.h" compile="0" resource="0"
             file="Source/ClickableLabel.h"/>
+      <FILE id="T684ji" name="CustomLookAndFeel.h" compile="0" resource="0"
+            file="Source/CustomLookAndFeel.h"/>
       <FILE id="RIbbop" name="SFZeroAudioProcessor.cpp" compile="1" resource="0"
             file="Source/SFZeroAudioProcessor.cpp"/>
       <FILE id="KVoSSg" name="SFZeroAudioProcessor.h" compile="0" resource="0"
@@ -97,6 +102,8 @@
       <FILE id="IxDO9a" name="SFZeroEditor.cpp" compile="1" resource="0"
             file="Source/SFZeroEditor.cpp"/>
       <FILE id="uE896w" name="SFZeroEditor.h" compile="0" resource="0" file="Source/SFZeroEditor.h"/>
+      <FILE id="PveUVI" name="TemplateOptionButton.h" compile="0" resource="0"
+            file="Source/TemplateOptionButton.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>

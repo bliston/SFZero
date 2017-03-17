@@ -367,6 +367,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\BinaryData.cpp">
+      <Filter>Sampled Instrument\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ClickableLabel.cpp">
       <Filter>Sampled Instrument\Source</Filter>
     </ClCompile>
@@ -2217,13 +2220,25 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\AppColours.h">
+      <Filter>Sampled Instrument\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BinaryData.h">
+      <Filter>Sampled Instrument\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ClickableLabel.h">
+      <Filter>Sampled Instrument\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CustomLookAndFeel.h">
       <Filter>Sampled Instrument\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SFZeroAudioProcessor.h">
       <Filter>Sampled Instrument\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SFZeroEditor.h">
+      <Filter>Sampled Instrument\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TemplateOptionButton.h">
       <Filter>Sampled Instrument\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h">

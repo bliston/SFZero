@@ -64,6 +64,7 @@ ifeq ($(CONFIG),Release)
 endif
 
 OBJECTS := \
+  $(JUCE_OBJDIR)/BinaryData_5ba7f54.o \
   $(JUCE_OBJDIR)/ClickableLabel_50df57bb.o \
   $(JUCE_OBJDIR)/SFZeroAudioProcessor_31b1f2c0.o \
   $(JUCE_OBJDIR)/SFZeroEditor_db20151.o \
@@ -102,6 +103,11 @@ clean:
 strip:
 	@echo Stripping Sampled Instrument
 	-@$(STRIP) --strip-unneeded $(JUCE_OUTDIR)/$(TARGET)
+
+$(JUCE_OBJDIR)/BinaryData_5ba7f54.o: ../../Source/BinaryData.cpp
+	-@mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling BinaryData.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/ClickableLabel_50df57bb.o: ../../Source/ClickableLabel.cpp
 	-@mkdir -p $(JUCE_OBJDIR)

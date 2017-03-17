@@ -4,11 +4,13 @@
 #include "JuceHeader.h"
 #include "ClickableLabel.h"
 #include "SFZeroAudioProcessor.h"
+#include "CustomLookAndFeel.h"
+#include "TemplateOptionButton.h"
 
 namespace sfzero
 {
 
-class SFZeroEditor : public AudioProcessorEditor, public Timer, public ClickableLabel::ClickListener
+class SFZeroEditor : public AudioProcessorEditor, public Timer, public ButtonListener
 {
 public:
   SFZeroEditor(SFZeroAudioProcessor *ownerFilter);
@@ -16,7 +18,7 @@ public:
 
   void paint(Graphics &g) override;
   void resized() override;
-  void labelClicked(Label *clickedLabel) override;
+  void buttonClicked(Button *button) override;
   void timerCallback() override;
 
 protected:
@@ -35,14 +37,14 @@ protected:
     showingSoundInfo,
     showingVoiceInfo,
   };
-
-  ClickableLabel fileLabel;
+  
+  OpenButton fileLabel;
   ClickableLabel pathLabel;
   ClickableLabel infoLabel;
   Viewport viewport;
   int showing, showingInfo;
-  MidiKeyboardComponent midiKeyboard;
   ProgressBar *progressBar;
+  CustomLookAndFeel lookAndFeel;
 
   SFZeroAudioProcessor *getProcessor() const { return static_cast<SFZeroAudioProcessor *>(getAudioProcessor()); }
   void chooseFile();
