@@ -65,6 +65,7 @@ public:
 		setColour(TabbedComponent::outlineColourId, Colours::white);
 		setColour(DocumentWindow::textColourId, Colours::white);
 		setColour(ProgressBar::foregroundColourId, accentColour);
+        setColour(ProgressBar::backgroundColourId, Colours::white);
 		//setColour(MidiKeyboardComponent::mouseOverKeyOverlayColourId, accentColour);
 		//setColour(MidiKeyboardComponent::keyDownOverlayColourId, accentColour);
 		//setColour(MidiKeyboardComponent::shadowColourId, Colours::lightgrey);
@@ -671,6 +672,111 @@ public:
 			g.fillRoundedRectangle(3.0f + i * w + w * 0.1f, 3.0f, w * 0.8f, height - 6.0f, w * 0.4f);
 		}
 	}
+    
+    //==============================================================================
+    void drawProgressBar (Graphics& g, ProgressBar& progressBar,
+                                          int width, int height,
+                                          double progress, const String& textToShow) override
+    {
+        const Colour background (progressBar.findColour (ProgressBar::backgroundColourId));
+        const Colour foreground (progressBar.findColour (ProgressBar::foregroundColourId));
+        
+        g.fillAll (background);
+        
+        if (progress >= 0.0f && progress < 1.0f)
+        {
+            drawGlassLozenge (g, 1.0f, 1.0f,
+                              (float) jlimit (0.0, width - 2.0, progress * (width - 2.0)),
+                              (float) (height - 2),
+                              foreground,
+                              0.5f, 0.0f,
+                              true, true, true, true);
+        }
+        
+        if (textToShow.isNotEmpty())
+        {
+            //g.setColour (Colour::contrasting (background, foreground));
+            //g.setFont (height * 0.6f);
+            
+            //g.drawText (textToShow, 0, 0, width, height, Justification::centred, false);
+        }
+    }
+    
+    //==============================================================================
+    void drawGlassLozenge (Graphics& g,
+                                           const float x, const float y, const float width, const float height,
+                                           const Colour& colour, const float outlineThickness, const float cornerSize,
+                                           const bool flatOnLeft,
+                                           const bool flatOnRight,
+                                           const bool flatOnTop,
+                                           const bool flatOnBottom) noexcept
+    {
+        if (width <= outlineThickness || height <= outlineThickness)
+            return;
+        
+        const int intX = (int) x;
+        const int intY = (int) y;
+        const int intW = (int) width;
+        const int intH = (int) height;
+        
+        const float cs = cornerSize < 0 ? jmin (width * 0.5f, height * 0.5f) : cornerSize;
+        const float edgeBlurRadius = height * 0.75f + (height - cs * 2.0f);
+        const int intEdge = (int) edgeBlurRadius;
+        
+        Path outline;
+        outline.addRoundedRectangle (x, y, width, height, cs, cs,
+                                     ! (flatOnLeft || flatOnTop),
+                                     ! (flatOnRight || flatOnTop),
+                                     ! (flatOnLeft || flatOnBottom),
+                                     ! (flatOnRight || flatOnBottom));
+        
+        {
+            g.setColour (colour);
+            
+            g.fillPath (outline);
+        }
+        
+        if (! (flatOnLeft || flatOnTop || flatOnBottom))
+        {
+            g.saveState();
+            g.setColour (colour);
+            g.reduceClipRegion (intX, intY, intEdge, intH);
+            g.fillPath (outline);
+            g.restoreState();
+        }
+        
+        if (! (flatOnRight || flatOnTop || flatOnBottom))
+        {
+            g.saveState();
+            g.setColour (colour);
+            g.reduceClipRegion (intX + intW - intEdge, intY, 2 + intEdge, intH);
+            g.fillPath (outline);
+            g.restoreState();
+        }
+        
+        {
+            const float leftIndent = flatOnTop || flatOnLeft ? 0.0f : cs * 0.4f;
+            const float rightIndent = flatOnTop || flatOnRight ? 0.0f : cs * 0.4f;
+            
+            Path highlight;
+            highlight.addRoundedRectangle (x + leftIndent,
+                                           y + cs * 0.1f,
+                                           width - (leftIndent + rightIndent),
+                                           height * 0.4f,
+                                           cs * 0.4f,
+                                           cs * 0.4f,
+                                           ! (flatOnLeft || flatOnTop),
+                                           ! (flatOnRight || flatOnTop),
+                                           ! (flatOnLeft || flatOnBottom),
+                                           ! (flatOnRight || flatOnBottom));
+            
+            g.setColour (colour);
+            g.fillPath (highlight);
+        }
+        
+        g.setColour (colour);
+        g.strokePath (outline, PathStrokeType (outlineThickness));
+        }
 
 private:
 	Image backgroundTexture;

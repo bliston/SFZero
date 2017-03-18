@@ -23,7 +23,7 @@ sfzero::SFZeroEditor::SFZeroEditor(SFZeroAudioProcessor *ownerFilter)
 
   addAndMakeVisible(&pathLabel);
   pathLabel.setJustificationType(Justification::centred);
-  Font font(fileLabel.getHeight() * 0.65f, Font::plain);
+  Font font(20, Font::plain);
   pathLabel.setFont(font);
   pathLabel.setColour(Label::textColourId, Colours::grey);
 
@@ -138,7 +138,7 @@ void sfzero::SFZeroEditor::showProgress()
   addAndMakeVisible(progressBar);
   int marginedWidth = getWidth() - 2 * hMargin;
   Rectangle<int> progressBarBounds = getLocalBounds();
-  progressBarBounds.removeFromTop (getHeight() - 20);
+  progressBarBounds.removeFromTop (getHeight() - 10);
   progressBar->setBounds(progressBarBounds);
   showing = showingProgress;
 }
