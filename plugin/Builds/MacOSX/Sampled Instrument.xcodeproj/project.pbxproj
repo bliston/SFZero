@@ -2914,8 +2914,8 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.0.1",
-					"JUCE_APP_VERSION_HEX=0x1", );
+					"JUCE_APP_VERSION=0.0.2",
+					"JUCE_APP_VERSION_HEX=0x2", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = ("../../JuceLibraryCode", "../../../../JUCE/modules", "../../../modules", "$(inherited)");
@@ -2949,8 +2949,8 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.0.1",
-					"JUCE_APP_VERSION_HEX=0x1", );
+					"JUCE_APP_VERSION=0.0.2",
+					"JUCE_APP_VERSION_HEX=0x2", );
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -2985,8 +2985,8 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.0.1",
-					"JUCE_APP_VERSION_HEX=0x1", );
+					"JUCE_APP_VERSION=0.0.2",
+					"JUCE_APP_VERSION_HEX=0x2", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = ("../../JuceLibraryCode", "../../../../JUCE/modules", "../../../modules", "$(inherited)");
@@ -3021,8 +3021,8 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.0.1",
-					"JUCE_APP_VERSION_HEX=0x1", );
+					"JUCE_APP_VERSION=0.0.2",
+					"JUCE_APP_VERSION_HEX=0x2", );
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -3057,8 +3057,8 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.0.1",
-					"JUCE_APP_VERSION_HEX=0x1", );
+					"JUCE_APP_VERSION=0.0.2",
+					"JUCE_APP_VERSION_HEX=0x2", );
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ("../../JuceLibraryCode", "../../../../JUCE/modules", "../../../modules", "$(inherited)");
 				INSTALL_PATH = "@executable_path/../Frameworks";
@@ -3086,8 +3086,8 @@
 					"JucePlugin_Build_AAX=0",
 					"JucePlugin_Build_Standalone=0",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.0.1",
-					"JUCE_APP_VERSION_HEX=0x1", );
+					"JUCE_APP_VERSION=0.0.2",
+					"JUCE_APP_VERSION_HEX=0x2", );
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ("../../JuceLibraryCode", "../../../../JUCE/modules", "../../../modules", "$(inherited)");

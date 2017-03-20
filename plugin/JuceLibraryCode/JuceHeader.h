@@ -40,8 +40,8 @@
 namespace ProjectInfo
 {
     const char* const  projectName    = "Sampled Instrument";
-    const char* const  versionString  = "0.0.1";
-    const int          versionNumber  = 0x1;
+    const char* const  versionString  = "0.0.2";
+    const int          versionNumber  = 0x2;
 }
 #endif
 

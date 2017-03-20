@@ -50,13 +50,10 @@ protected:
   void chooseFile();
   void setFile(File *newFile);
   void updateFile(File *file);
-  void showSoundInfo();
-  void showVoiceInfo();
-  void showVersion();
   void showPath();
   void showProgress();
   void hideProgress();
-  void showSubsound();
+
 };
 }
 
