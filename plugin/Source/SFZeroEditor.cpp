@@ -15,10 +15,17 @@ sfzero::SFZeroEditor::SFZeroEditor(SFZeroAudioProcessor *ownerFilter)
       showingInfo(showingSoundInfo),
       progressBar(nullptr)
 {
-  setSize(600, 300);
+  
+  LookAndFeel::setDefaultLookAndFeel(&lookAndFeel);
+  setSize(400, 200);
 
   addAndMakeVisible(&fileLabel);
-  fileLabel.setButtonText("Choose Instrument");
+    
+  fileLabel.setColour(TextButton::textColourOffId, findColour(mainAccentColourId));
+  fileLabel.setColour(TextButton::ColourIds::buttonColourId, findColour(mainBackgroundColourId));
+  fileLabel.setConnectedEdges(3);
+  fileLabel.setButtonText(Icons::FolderOpen + "~" + "Load Instrument");
+
   fileLabel.addListener(this);
 
   addAndMakeVisible(&pathLabel);

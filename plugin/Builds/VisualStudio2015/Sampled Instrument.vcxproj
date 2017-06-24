@@ -1818,7 +1818,7 @@
     <ClInclude Include="..\..\Source\AppColours.h"/>
     <ClInclude Include="..\..\Source\BinaryData.h"/>
     <ClInclude Include="..\..\Source\ClickableLabel.h"/>
-    <ClInclude Include="..\..\Source\CustomLookAndFeel.h"/>
+    <ClInclude Include="..\..\Source\MiddleLookAndFeel.h"/>
     <ClInclude Include="..\..\Source\SFZeroAudioProcessor.h"/>
     <ClInclude Include="..\..\Source\SFZeroEditor.h"/>
     <ClInclude Include="..\..\Source\TemplateOptionButton.h"/>

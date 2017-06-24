@@ -94,10 +94,10 @@
             file="Source/ClickableLabel.cpp"/>
       <FILE id="lQwIPH" name="ClickableLabel.h" compile="0" resource="0"
             file="Source/ClickableLabel.h"/>
-      <FILE id="T684ji" name="CustomLookAndFeel.h" compile="0" resource="0"
-            file="Source/CustomLookAndFeel.h"/>
       <FILE id="RIbbop" name="SFZeroAudioProcessor.cpp" compile="1" resource="0"
             file="Source/SFZeroAudioProcessor.cpp"/>
+      <FILE id="u5U5NE" name="MiddleLookAndFeel.h" compile="0" resource="0"
+            file="Source/MiddleLookAndFeel.h"/>
       <FILE id="KVoSSg" name="SFZeroAudioProcessor.h" compile="0" resource="0"
             file="Source/SFZeroAudioProcessor.h"/>
       <FILE id="IxDO9a" name="SFZeroEditor.cpp" compile="1" resource="0"

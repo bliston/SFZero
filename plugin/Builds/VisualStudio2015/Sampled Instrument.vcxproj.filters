@@ -2229,7 +2229,7 @@
     <ClInclude Include="..\..\Source\ClickableLabel.h">
       <Filter>Sampled Instrument\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\CustomLookAndFeel.h">
+    <ClInclude Include="..\..\Source\MiddleLookAndFeel.h">
       <Filter>Sampled Instrument\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SFZeroAudioProcessor.h">

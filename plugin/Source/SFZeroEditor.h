@@ -4,8 +4,22 @@
 #include "JuceHeader.h"
 #include "ClickableLabel.h"
 #include "SFZeroAudioProcessor.h"
-#include "CustomLookAndFeel.h"
+#include "MiddleLookAndFeel.h"
 #include "TemplateOptionButton.h"
+
+namespace Icons
+{
+    const String Done = CharPointer_UTF8("\uE5CA");
+    const String Play = CharPointer_UTF8("\uE037");
+    const String Pause = CharPointer_UTF8("\uE034");
+    const String Rewind = CharPointer_UTF8("\uE045");
+    const String FastForward = CharPointer_UTF8("\uE044");
+    const String Record = CharPointer_UTF8("\uE061");
+    const String Stop = CharPointer_UTF8("\uE047");
+    const String FolderOpen = CharPointer_UTF8("\uE2C7");
+    const String Smiley1 = CharPointer_UTF8("\uE813");
+    
+}
 
 namespace sfzero
 {
@@ -38,13 +52,13 @@ protected:
     showingVoiceInfo,
   };
   
-  OpenButton fileLabel;
+  TextButton fileLabel;
   ClickableLabel pathLabel;
   ClickableLabel infoLabel;
   Viewport viewport;
   int showing, showingInfo;
   ProgressBar *progressBar;
-  CustomLookAndFeel lookAndFeel;
+  MiddleLookAndFeel lookAndFeel;
 
   SFZeroAudioProcessor *getProcessor() const { return static_cast<SFZeroAudioProcessor *>(getAudioProcessor()); }
   void chooseFile();
