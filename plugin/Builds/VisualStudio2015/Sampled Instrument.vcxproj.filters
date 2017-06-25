@@ -353,6 +353,24 @@
     <Filter Include="Juce Modules\juce_gui_extra\native">
       <UniqueIdentifier>{C413328B-5D81-89EE-F4F3-75752E700DE4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Juce Modules\Peels">
+      <UniqueIdentifier>{A26B1DEA-DFB8-BED4-C1EB-FF597920A321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Peels\Peels">
+      <UniqueIdentifier>{2D24FA22-674F-EBC6-97A5-4529319B3595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Peels\Peels\BinaryData">
+      <UniqueIdentifier>{01EFED1E-7EE1-44FB-5225-0511F4807F42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Peels\Peels\ColorIds">
+      <UniqueIdentifier>{56721022-300D-07A6-5EA4-AC59B6176E7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Peels\Peels\Components">
+      <UniqueIdentifier>{136753D7-E50D-A9CE-AA51-07770ED62795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juce Modules\Peels\Peels\LookAndFeels">
+      <UniqueIdentifier>{A793C9CD-FEC8-0435-1C5D-14E648175539}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Juce Modules\SFZero">
       <UniqueIdentifier>{54762860-88A9-A771-BA0B-4417941FC39A}</UniqueIdentifier>
     </Filter>
@@ -367,12 +385,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\BinaryData.cpp">
-      <Filter>Sampled Instrument\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\ClickableLabel.cpp">
-      <Filter>Sampled Instrument\Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\SFZeroAudioProcessor.cpp">
       <Filter>Sampled Instrument\Source</Filter>
     </ClCompile>
@@ -2134,6 +2146,18 @@
     <ClCompile Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.mm">
       <Filter>Juce Modules\juce_gui_extra</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\modules\Peels\Peels\BinaryData\BinaryData.cpp">
+      <Filter>Juce Modules\Peels\Peels\BinaryData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\Peels\Peels\Components\SlidingPanelComponent.cpp">
+      <Filter>Juce Modules\Peels\Peels\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\Peels\Peels.cpp">
+      <Filter>Juce Modules\Peels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\Peels\Peels.mm">
+      <Filter>Juce Modules\Peels</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\modules\SFZero\sfzero\RIFF.cpp">
       <Filter>Juce Modules\SFZero\sfzero</Filter>
     </ClCompile>
@@ -2215,30 +2239,18 @@
     <ClCompile Include="..\..\JuceLibraryCode\juce_gui_extra.cpp">
       <Filter>Juce Library Code</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\Peels.cpp">
+      <Filter>Juce Library Code</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\SFZero.cpp">
       <Filter>Juce Library Code</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\AppColours.h">
-      <Filter>Sampled Instrument\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\BinaryData.h">
-      <Filter>Sampled Instrument\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\ClickableLabel.h">
-      <Filter>Sampled Instrument\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\MiddleLookAndFeel.h">
-      <Filter>Sampled Instrument\Source</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\SFZeroAudioProcessor.h">
       <Filter>Sampled Instrument\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SFZeroEditor.h">
-      <Filter>Sampled Instrument\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TemplateOptionButton.h">
       <Filter>Sampled Instrument\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h">
@@ -4107,6 +4119,27 @@
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h">
       <Filter>Juce Modules\juce_gui_extra</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\BinaryData\BinaryData.h">
+      <Filter>Juce Modules\Peels\Peels\BinaryData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\ColorIds\AppColours.h">
+      <Filter>Juce Modules\Peels\Peels\ColorIds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\Components\SlidingPanelComponent.h">
+      <Filter>Juce Modules\Peels\Peels\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\LookAndFeels\MiddleLookAndFeel.h">
+      <Filter>Juce Modules\Peels\Peels\LookAndFeels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\PeelsCommon.h">
+      <Filter>Juce Modules\Peels\Peels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\Peels\Peels.h">
+      <Filter>Juce Modules\Peels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\Peels\Peels.h">
+      <Filter>Juce Modules\Peels</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\generators.h">
       <Filter>Juce Modules\SFZero\sfzero\sf2-chunks</Filter>
     </ClInclude>
@@ -4222,6 +4255,9 @@
     </None>
     <None Include="..\..\..\..\..\..\..\JUCE\modules\juce_graphics\image_formats\pnglib\libpng_readme.txt">
       <Filter>Juce Modules\juce_graphics\image_formats\pnglib</Filter>
+    </None>
+    <None Include="..\..\..\modules\Peels\README.md">
+      <Filter>Juce Modules\Peels</Filter>
     </None>
     <None Include="..\..\..\modules\SFZero\README.md">
       <Filter>Juce Modules\SFZero</Filter>

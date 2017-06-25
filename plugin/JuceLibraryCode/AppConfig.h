@@ -34,6 +34,7 @@
 #define JUCE_MODULE_AVAILABLE_juce_graphics                 1
 #define JUCE_MODULE_AVAILABLE_juce_gui_basics               1
 #define JUCE_MODULE_AVAILABLE_juce_gui_extra                1
+#define JUCE_MODULE_AVAILABLE_Peels                         1
 #define JUCE_MODULE_AVAILABLE_SFZero                        1
 
 //==============================================================================

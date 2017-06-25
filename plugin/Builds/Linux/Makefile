@@ -33,7 +33,7 @@ ifeq ($(CONFIG),Debug)
     TARGET_ARCH := -march=native
   endif
 
-  JUCE_CPPFLAGS := $(DEPFLAGS) -DLINUX=1 -DDEBUG=1 -D_DEBUG=1 -DJUCER_LINUX_MAKE_7346DA2A=1 -DJUCE_APP_VERSION=0.0.2 -DJUCE_APP_VERSION_HEX=0x2 $(shell pkg-config --cflags alsa freetype2 libcurl x11 xext xinerama) -pthread -I../../JuceLibraryCode -I../../../../../../../JUCE/modules $(CPPFLAGS)
+  JUCE_CPPFLAGS := $(DEPFLAGS) -DLINUX=1 -DDEBUG=1 -D_DEBUG=1 -DJUCER_LINUX_MAKE_7346DA2A=1 -DJUCE_APP_VERSION=0.0.2 -DJUCE_APP_VERSION_HEX=0x2 $(shell pkg-config --cflags alsa freetype2 libcurl x11 xext xinerama) -pthread -I../../JuceLibraryCode -I../../../../../../../JUCE/modules -I../../../modules $(CPPFLAGS)
   JUCE_CFLAGS += $(JUCE_CPPFLAGS) $(TARGET_ARCH) -g -ggdb -fPIC -O0 $(CFLAGS)
   JUCE_CXXFLAGS += $(JUCE_CFLAGS) -std=c++11 $(CXXFLAGS)
   JUCE_LDFLAGS += $(TARGET_ARCH) -L$(JUCE_BINDIR) -L$(JUCE_LIBDIR) -Wl,--no-undefined -shared -L/usr/X11R6/lib/ $(shell pkg-config --libs alsa freetype2 libcurl x11 xext xinerama) -ldl -lpthread -lrt  $(LDFLAGS)
@@ -53,7 +53,7 @@ ifeq ($(CONFIG),Release)
     TARGET_ARCH := -march=native
   endif
 
-  JUCE_CPPFLAGS := $(DEPFLAGS) -DLINUX=1 -DNDEBUG=1 -DJUCER_LINUX_MAKE_7346DA2A=1 -DJUCE_APP_VERSION=0.0.2 -DJUCE_APP_VERSION_HEX=0x2 $(shell pkg-config --cflags alsa freetype2 libcurl x11 xext xinerama) -pthread -I../../JuceLibraryCode -I../../../../../../../JUCE/modules $(CPPFLAGS)
+  JUCE_CPPFLAGS := $(DEPFLAGS) -DLINUX=1 -DNDEBUG=1 -DJUCER_LINUX_MAKE_7346DA2A=1 -DJUCE_APP_VERSION=0.0.2 -DJUCE_APP_VERSION_HEX=0x2 $(shell pkg-config --cflags alsa freetype2 libcurl x11 xext xinerama) -pthread -I../../JuceLibraryCode -I../../../../../../../JUCE/modules -I../../../modules $(CPPFLAGS)
   JUCE_CFLAGS += $(JUCE_CPPFLAGS) $(TARGET_ARCH) -fPIC -Os $(CFLAGS)
   JUCE_CXXFLAGS += $(JUCE_CFLAGS) -std=c++11 $(CXXFLAGS)
   JUCE_LDFLAGS += $(TARGET_ARCH) -L$(JUCE_BINDIR) -L$(JUCE_LIBDIR) -Wl,--no-undefined -shared -fvisibility=hidden -L/usr/X11R6/lib/ $(shell pkg-config --libs alsa freetype2 libcurl x11 xext xinerama) -ldl -lpthread -lrt  $(LDFLAGS)
@@ -64,8 +64,6 @@ ifeq ($(CONFIG),Release)
 endif
 
 OBJECTS := \
-  $(JUCE_OBJDIR)/BinaryData_5ba7f54.o \
-  $(JUCE_OBJDIR)/ClickableLabel_50df57bb.o \
   $(JUCE_OBJDIR)/SFZeroAudioProcessor_31b1f2c0.o \
   $(JUCE_OBJDIR)/SFZeroEditor_db20151.o \
   $(JUCE_OBJDIR)/juce_audio_basics_6b797ca1.o \
@@ -81,6 +79,7 @@ OBJECTS := \
   $(JUCE_OBJDIR)/juce_graphics_9c18891e.o \
   $(JUCE_OBJDIR)/juce_gui_basics_8a6da59c.o \
   $(JUCE_OBJDIR)/juce_gui_extra_4a026f23.o \
+  $(JUCE_OBJDIR)/Peels_14e67ef8.o \
   $(JUCE_OBJDIR)/SFZero_894a8d04.o \
 
 .PHONY: clean
@@ -103,16 +102,6 @@ clean:
 strip:
 	@echo Stripping Sampled Instrument
 	-@$(STRIP) --strip-unneeded $(JUCE_OUTDIR)/$(TARGET)
-
-$(JUCE_OBJDIR)/BinaryData_5ba7f54.o: ../../Source/BinaryData.cpp
-	-@mkdir -p $(JUCE_OBJDIR)
-	@echo "Compiling BinaryData.cpp"
-	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
-
-$(JUCE_OBJDIR)/ClickableLabel_50df57bb.o: ../../Source/ClickableLabel.cpp
-	-@mkdir -p $(JUCE_OBJDIR)
-	@echo "Compiling ClickableLabel.cpp"
-	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/SFZeroAudioProcessor_31b1f2c0.o: ../../Source/SFZeroAudioProcessor.cpp
 	-@mkdir -p $(JUCE_OBJDIR)
@@ -187,6 +176,11 @@ $(JUCE_OBJDIR)/juce_gui_basics_8a6da59c.o: ../../JuceLibraryCode/juce_gui_basics
 $(JUCE_OBJDIR)/juce_gui_extra_4a026f23.o: ../../JuceLibraryCode/juce_gui_extra.cpp
 	-@mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling juce_gui_extra.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/Peels_14e67ef8.o: ../../JuceLibraryCode/Peels.cpp
+	-@mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling Peels.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/SFZero_894a8d04.o: ../../JuceLibraryCode/SFZero.cpp

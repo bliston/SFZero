@@ -2,10 +2,7 @@
 #define INCLUDED_SFZEROEDITOR_H
 
 #include "JuceHeader.h"
-#include "ClickableLabel.h"
 #include "SFZeroAudioProcessor.h"
-#include "MiddleLookAndFeel.h"
-#include "TemplateOptionButton.h"
 
 namespace Icons
 {
@@ -53,12 +50,11 @@ protected:
   };
   
   TextButton fileLabel;
-  ClickableLabel pathLabel;
-  ClickableLabel infoLabel;
+  Label pathLabel;
   Viewport viewport;
   int showing, showingInfo;
   ProgressBar *progressBar;
-  MiddleLookAndFeel lookAndFeel;
+  Peels::MiddleLookAndFeel lookAndFeel;
 
   SFZeroAudioProcessor *getProcessor() const { return static_cast<SFZeroAudioProcessor *>(getAudioProcessor()); }
   void chooseFile();

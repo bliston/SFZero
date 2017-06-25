@@ -35,6 +35,7 @@
         <MODULEPATH id="juce_audio_devices" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="SFZero" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="Peels" path="../modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <LINUX_MAKE targetFolder="Builds/Linux" vstFolder="../../SDKs/vstsdk2.4">
@@ -58,6 +59,7 @@
         <MODULEPATH id="juce_audio_devices" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="SFZero" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="Peels" path="../modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
     <VS2015 targetFolder="Builds/VisualStudio2015" vstFolder="">
@@ -82,29 +84,19 @@
         <MODULEPATH id="juce_audio_formats" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../../../../../JUCE/modules"/>
         <MODULEPATH id="juce_audio_basics" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="Peels" path="../modules"/>
       </MODULEPATHS>
     </VS2015>
   </EXPORTFORMATS>
   <MAINGROUP id="STGh0u" name="Sampled Instrument">
     <GROUP id="{1110531B-E755-9964-D428-0B0E27C2D745}" name="Source">
-      <FILE id="Y0lLC9" name="AppColours.h" compile="0" resource="0" file="Source/AppColours.h"/>
-      <FILE id="YQNwoV" name="BinaryData.cpp" compile="1" resource="0" file="Source/BinaryData.cpp"/>
-      <FILE id="X30Aqy" name="BinaryData.h" compile="0" resource="0" file="Source/BinaryData.h"/>
-      <FILE id="onAAbD" name="ClickableLabel.cpp" compile="1" resource="0"
-            file="Source/ClickableLabel.cpp"/>
-      <FILE id="lQwIPH" name="ClickableLabel.h" compile="0" resource="0"
-            file="Source/ClickableLabel.h"/>
       <FILE id="RIbbop" name="SFZeroAudioProcessor.cpp" compile="1" resource="0"
             file="Source/SFZeroAudioProcessor.cpp"/>
-      <FILE id="u5U5NE" name="MiddleLookAndFeel.h" compile="0" resource="0"
-            file="Source/MiddleLookAndFeel.h"/>
       <FILE id="KVoSSg" name="SFZeroAudioProcessor.h" compile="0" resource="0"
             file="Source/SFZeroAudioProcessor.h"/>
       <FILE id="IxDO9a" name="SFZeroEditor.cpp" compile="1" resource="0"
             file="Source/SFZeroEditor.cpp"/>
       <FILE id="uE896w" name="SFZeroEditor.h" compile="0" resource="0" file="Source/SFZeroEditor.h"/>
-      <FILE id="PveUVI" name="TemplateOptionButton.h" compile="0" resource="0"
-            file="Source/TemplateOptionButton.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
@@ -120,6 +112,7 @@
     <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="Peels" showAllCode="1" useLocalCopy="0"/>
     <MODULE id="SFZero" showAllCode="1" useLocalCopy="0"/>
   </MODULES>
   <JUCEOPTIONS JUCE_QUICKTIME="disabled" JUCE_USE_OGGVORBIS="enabled"/>

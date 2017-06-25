@@ -140,7 +140,6 @@ void sfzero::SFZeroEditor::showProgress()
   auto processor = getProcessor();
 
   pathLabel.setVisible(false);
-  infoLabel.setVisible(false);
   progressBar = new ProgressBar(processor->loadProgress);
   addAndMakeVisible(progressBar);
   int marginedWidth = getWidth() - 2 * hMargin;
@@ -162,5 +161,4 @@ void sfzero::SFZeroEditor::hideProgress()
   progressBar = nullptr;
 
   pathLabel.setVisible(true);
-  infoLabel.setVisible(true);
 }

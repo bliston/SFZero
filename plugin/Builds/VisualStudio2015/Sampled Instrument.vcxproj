@@ -131,8 +131,6 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\BinaryData.cpp"/>
-    <ClCompile Include="..\..\Source\ClickableLabel.cpp"/>
     <ClCompile Include="..\..\Source\SFZeroAudioProcessor.cpp"/>
     <ClCompile Include="..\..\Source\SFZeroEditor.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -1757,6 +1755,15 @@
     <ClCompile Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\modules\Peels\Peels\BinaryData\BinaryData.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\Peels\Peels\Components\SlidingPanelComponent.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\Peels\Peels.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\modules\SFZero\sfzero\RIFF.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -1812,16 +1819,12 @@
     <ClCompile Include="..\..\JuceLibraryCode\juce_graphics.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\juce_gui_basics.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\juce_gui_extra.cpp"/>
+    <ClCompile Include="..\..\JuceLibraryCode\Peels.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\SFZero.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\AppColours.h"/>
-    <ClInclude Include="..\..\Source\BinaryData.h"/>
-    <ClInclude Include="..\..\Source\ClickableLabel.h"/>
-    <ClInclude Include="..\..\Source\MiddleLookAndFeel.h"/>
     <ClInclude Include="..\..\Source\SFZeroAudioProcessor.h"/>
     <ClInclude Include="..\..\Source\SFZeroEditor.h"/>
-    <ClInclude Include="..\..\Source\TemplateOptionButton.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioSampleBuffer.h"/>
@@ -2444,6 +2447,13 @@
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_extra\native\juce_mac_CarbonViewWrapperComponent.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h"/>
     <ClInclude Include="..\..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h"/>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\BinaryData\BinaryData.h"/>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\ColorIds\AppColours.h"/>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\Components\SlidingPanelComponent.h"/>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\LookAndFeels\MiddleLookAndFeel.h"/>
+    <ClInclude Include="..\..\..\modules\Peels\Peels\PeelsCommon.h"/>
+    <ClInclude Include="..\..\..\modules\Peels\Peels.h"/>
+    <ClInclude Include="..\..\..\modules\Peels\Peels.h"/>
     <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\generators.h"/>
     <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\ibag.h"/>
     <ClInclude Include="..\..\..\modules\SFZero\sfzero\sf2-chunks\igen.h"/>
@@ -2484,6 +2494,7 @@
     <None Include="..\..\..\..\..\..\..\JUCE\modules\juce_audio_plugin_client\juce_audio_plugin_client_RTAS.r"/>
     <None Include="..\..\..\..\..\..\..\JUCE\modules\juce_graphics\image_formats\jpglib\changes to libjpeg for JUCE.txt"/>
     <None Include="..\..\..\..\..\..\..\JUCE\modules\juce_graphics\image_formats\pnglib\libpng_readme.txt"/>
+    <None Include="..\..\..\modules\Peels\README.md"/>
     <None Include="..\..\..\modules\SFZero\README.md"/>
   </ItemGroup>
   <ItemGroup>
